@@ -1,0 +1,46 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  transition: all 0.2s linear;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 7rem;
+  font-size: 62.5%;
+}
+
+:root {
+  --main-color: #002d13;
+  --secondary: #ffff00;
+  --fonts: #fff;
+  --sec-font: #000000;
+  --acid-green: #c0cb05;
+  --olive: #80960a;
+  --lincoln-green: #204811;
+  --border-radius: 95% 4% 97% 5%/4% 94% 3% 95%;
+  --border: 0.2rem solid var(--main-color);
+  --font-size: 1.5rem;
+}
+.App {
+  background: var(--main-color);
+  width: auto;
+  margin: 0px auto 0px auto;
+  font-family: "Montserrat", Nunito, sans-serif;
+  color: #fff;
+  font-size: 16px;
+  
+}
+
+body {
+  margin: 0px auto;
+  background-color: var(--main-color);
+  color: #fff;
+  padding: 0;
+}
