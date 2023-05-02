@@ -12,29 +12,30 @@
 .card {
   display: block;
   transform: none;
-  padding: 10px;
-  text-align: center;  
+  padding: 0.625em;
+  text-align: center;
 }
-.end__sapa__links > .card{
-    background-color: var(--olive);
-    border-radius: var(--border-radius);
-    height: 350px;
-    margin-bottom: 20px;
-    cursor: pointer;
+.end__sapa__links > .card {
+  background-color: var(--olive);
+  border-radius: var(--border-radius);
+  height: 24.875em;
+  cursor: pointer;
+  text-align: center;
 }
-.end__sapa__links > .card:hover{
-    background-color: var(--acid-green);
+.end__sapa__links > .card:hover {
+  background-color: var(--acid-green);
 }
 
 .endS_text {
-  flex-grow: 1;
   text-align: center;
-  display: flex;
-  align-items: center;
-  text-align: left;
   font-size: 32px;
   font-weight: 900;
   font-style: oblique;
+  margin-top: 20px;
+}
+
+.endS_text h2 {
+  color: #fff;
 }
 
 .icon__container {
@@ -44,11 +45,10 @@
   align-items: center;
   color: #fff;
 }
-.icon__container h2 {
-  color: #fff;
-}
 
 .card {
+  display: flex;
+  justify-content: space-between;
   border-radius: 100%;
   height: 5rem;
   background: transparent;
@@ -67,4 +67,101 @@
 
 .card {
   background-color: var(--olive);
+}
+
+.carousel-indicators {
+  bottom: -30px;
+}
+
+.carousel-indicators li {
+  background-color: var(--main-color);
+  border: none;
+  width: 10px;
+  height: 10px;
+  margin: 0 5px;
+  opacity: 0.5;
+  transition: opacity 0.5s;
+}
+
+.carousel-indicators .active {
+  opacity: 1;
+}
+.card h2{
+text-align: center;
+    font-size: 32px;
+    font-weight: 900;
+    font-style: oblique;
+    margin-top: 20px;
+}
+
+
+@media screen and (max-width: 1200px) {
+  .end__sapa {
+    display: block;
+    justify-content: center;
+    
+  }
+
+  .card {
+    width: 100%;
+  }
+
+  .endS_text {
+    margin-top: 0;
+  }
+  .icon__container img {
+  width: 50%;
+}
+}
+
+
+@media screen and (max-width: 748px) {
+  .end__sapa__links {
+    display: flex;
+    flex-direction: column;
+    
+   
+  }
+  
+  .end__sapa {
+    display: block;
+    box-sizing: border-box;
+    width: 50vw;
+    height: 50vh;
+    margin: 0 auto;
+    
+  }
+
+  .end__sapa__links > .card {
+    background-color: var(--olive);
+    border-radius: 50%;
+    height: 10em;
+    width:10em ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    text-align: center;
+    
+  }
+
+  .end__sapa__links {
+    flex-direction: row;
+    
+  }
+  .end__sapa ,.end__sapa__links{
+    margin-left: 0px;
+  }
+
+  .card h2 {
+    font-size: 1.2em;
+  }
+
+  .endS_text h3 {
+    font-size: 1.2em;
+  }
+  .card {
+    height: 10vh;
+    width: 10vh;
+  }
 }

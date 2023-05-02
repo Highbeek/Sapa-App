@@ -5,10 +5,13 @@ import Modal from "react-bootstrap/Modal";
 import "./Navbar.css";
 import { AiOutlineBars } from "react-icons/ai";
 import LoginPage from "../pages/LoginPage";
+import DropdownMenu from "../components/DropdownMenu";
+import { IoMdArrowDropdown } from "react-icons/io";
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
   const [showLoginModal, setShowLoginModal] = useState(false);
+  const [showDropdownModal, setShowDropdownModal] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -26,16 +29,30 @@ const Navbar = () => {
   const handleOpenLoginModal = () => {
     setShowLoginModal(true);
   };
+
   const handleCloseLoginModal = () => {
     setShowLoginModal(false);
+  };
+
+  const handleMouseEnter = (event) => {
+    if (event.target.innerText === "Discover") {
+      setShowDropdownModal(true);
+    }
+  };
+
+  const handleMouseLeave = () => {
+    setTimeout(() => {
+      setShowDropdownModal(false);
+    }, 100);
   };
 
   return (
     <header className="header">
       <nav className={`navbar ${scrolled ? "navbar-scrolled" : ""}`}>
         <ul
-          className={`nav-links ${scrolled ? "scrolled" : ""} 
-          }`}
+          className={`nav-links ${scrolled ? "scrolled" : ""}`}
+          onMouseEnter={handleMouseEnter}
+          onMouseLeave={handleMouseLeave}
         >
           <li className="links">
             <Link className="navbar__brand" to="/">
@@ -59,9 +76,30 @@ const Navbar = () => {
               </form>
             </div>
           </li>
-          <li className="links">
-            <Link to="/discover">Discover</Link>
+          <li>
+            <Link
+              to="#"
+              className="links"
+              onMouseEnter={handleMouseEnter}
+              onMouseLeave={handleMouseLeave}
+            >
+              Discover
+              <IoMdArrowDropdown />
+            </Link>
+            <Modal
+              show={showDropdownModal}
+              onHide={() => setShowDropdownModal(false)}
+              className="modal-dialog-centered"
+            >
+              <Modal.Header>
+                <Modal.Title>Discover</Modal.Title>
+              </Modal.Header>
+              <Modal.Body>
+                <DropdownMenu />
+              </Modal.Body>
+            </Modal>
           </li>
+
           <li className="links">
             <Link to="/howitworks">How It Works</Link>
           </li>
@@ -70,7 +108,7 @@ const Navbar = () => {
               SignIn
             </button>
           </li>
-          <AiOutlineBars className="menu__icon"/>{" "}
+          <AiOutlineBars className="menu__icon" />
         </ul>
       </nav>
 

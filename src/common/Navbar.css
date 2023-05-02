@@ -7,9 +7,9 @@ nav ul {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 80px;
+  height: 5em;
   position: fixed;
-  top: 20px;
+  top: 2.25em;
   z-index: 1000;
   transition: all 0.3s ease-in-out;
 }
@@ -85,11 +85,11 @@ li input {
 
 .navbar__search__input-container {
   flex: 1;
-  padding-right: 10px;
+  padding-right: 0.625em;
 }
 
 .navbar__search__input {
-  padding: 10px;
+  padding: 0.625em;
   font-size: 17px;
   border-right: 1px solid #002d13;
   background: transparent;
@@ -198,12 +198,16 @@ li.btn button:hover {
   display: none;
 }
 
+
 @media screen and (max-width: 768px) {
   .nav-links li:not(:first-child) {
     display: none;
   }
   .menu__icon {
     display: block;
+    font-size: 2em;
+    color: #002d13;
+    cursor: pointer;
   }
 
   .navbar__links {
@@ -212,7 +216,7 @@ li.btn button:hover {
     top: 60px; /* adjust the value according to your design */
     left: 0;
     width: 100%;
-    padding: 10px;
+    padding: 0.625em;
     background-color: #333;
     z-index: 1;
   }

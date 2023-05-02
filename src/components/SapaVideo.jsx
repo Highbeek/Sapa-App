@@ -3,9 +3,9 @@ import Love from "../assets/love.png";
 
 const SapaVideo = () => {
   return (
-    <div style={{ position: "relative" }}>
+    <div style={{ position: "relative", height: "60vh" }}>
       <iframe
-        src="https://youtu.be/xozNnytRE6E"
+        src="https://www.youtube.com/embed/xozNnytRE6E?modestbranding=1"
         title="charity"
         style={{
           width: "100%",
@@ -13,10 +13,10 @@ const SapaVideo = () => {
           border: "none",
           borderRadius: "10px",
           boxShadow: "0 2px 5px rgba(0, 0, 0, 0.3)",
-          opacity: "0.7", 
-         
+          opacity: "0.7",
         }}
       />
+
       <div
         style={{
           position: "absolute",

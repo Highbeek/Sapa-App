@@ -37,11 +37,12 @@ const Home = () => {
         <div className="picBackground">
           <ImageGrid
             searchTerm="africa children"
-            numImages={2}
+            numImages={1}
             className="singleImg"
           />
         </div>
       </section>
+
       <section className="about">
         <div className="steps">
           <p>What to expect</p>
@@ -49,41 +50,58 @@ const Home = () => {
             Getting help on <em>saPA</em> takes just a few minutes
           </h2>
         </div>
-
-        <div className="d-flex how justify-content-between">
-          <div className="links">
-            <div>
+        <div className="row how d-flex justify-content-center">
+          <div className="col-md-4 col-sm-12">
+            <div className="links">
               <strong className="bullets">1</strong>
+              <h3>Begin</h3>
+              <p>Start with your name and location.</p>
             </div>
-            <h3>Begin</h3>
-            <p>Start with your name and location.</p>
           </div>
-          <div className="links">
-            <div>
+          <div className="col-md-4 col-sm-12">
+            <div className="links">
               <strong className="bullets">2</strong>
+              <h3>Yarn your tori</h3>
+              <p>Let our template guide you</p>
             </div>
-            <h3>Yarn your tori</h3>
-            <p>Let our template guide you</p>
           </div>
-
-          <div className="links">
-            <div>
+          <div className="col-md-4 col-sm-12">
+            <div className="links">
               <strong className="bullets">3</strong>
+              <h3>Share with the world</h3>
+              <p>Soro Soke and get help.</p>
             </div>
-            <h3>Share with the world</h3>
-            <p>Soro Soke and get help.</p>
           </div>
         </div>
       </section>
-      <section className="end__sapa d-flex">
-        <div className="endS_text">end saPA for ...</div>
+
+      <section className="end__sapa">
+        <div className="endS__text">
+          {" "}
+          <h3>end saPA for ...</h3>
+        </div>
         <div
           className="end__sapa__links d-flex"
           style={{ background: "oliveGreen" }}
         >
-          <EndSapa icon={Self} text="YourSelf" img={Arrow} />
-          <EndSapa icon={Hug} text="Your Padi" img={Arrow} />
-          <EndSapa icon={generous} text="Do Giveaway" img={Arrow} />
+          <EndSapa
+            className="img-fluid"
+            icon={Self}
+            text="YourSelf"
+            img={Arrow}
+          />
+          <EndSapa
+            className="img-fluid"
+            icon={Hug}
+            text="Your Padi"
+            img={Arrow}
+          />
+          <EndSapa
+            className="img-fluid"
+            icon={generous}
+            text="Do Giveaway"
+            img={Arrow}
+          />
         </div>
       </section>
       <section className="gallery">
@@ -91,7 +109,7 @@ const Home = () => {
         <ImageGrid
           searchTerm="people africa"
           numImages={15}
-          className="image-grid custom"
+          className="image-grid custom img-fluid"
         />
         <div className="empty"></div>
       </section>
