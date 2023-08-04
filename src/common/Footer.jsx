@@ -1,6 +1,5 @@
-import "./Footer.css";
-import { BsFacebook, BsTwitter, BsLinkedin, BsInstagram } from "react-icons/bs";
 import React from "react";
+import { BsFacebook, BsTwitter, BsLinkedin, BsInstagram } from "react-icons/bs";
 import { FaMapMarkerAlt, FaEnvelope, FaPhoneAlt } from "react-icons/fa";
 import { AiOutlineArrowRight } from "react-icons/ai";
 import { Link, useNavigate } from "react-router-dom";
