@@ -1,4 +1,5 @@
-import React, { useEffect, useState } from "react";
+// Navbar.js
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import Love from "../assets/love.png";
 import Modal from "react-bootstrap/Modal";
@@ -7,57 +8,48 @@ import { AiOutlineBars } from "react-icons/ai";
 import LoginPage from "../pages/LoginPage";
 import DropdownMenu from "../components/DropdownMenu";
 import { IoMdArrowDropdown } from "react-icons/io";
-
+import Discover from "../pages/Discover";
+import logo from "../assets/logo.png";
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
   const [showLoginModal, setShowLoginModal] = useState(false);
   const [showDropdownModal, setShowDropdownModal] = useState(false);
+  const [showSideModal, setShowSideModal] = useState(false);
+  const [showDiscoverModal, setShowDiscoverModal] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
-      const isScrolled = window.scrollY > 70;
-      setScrolled(isScrolled);
+      setScrolled(window.scrollY > 70);
     };
-
     window.addEventListener("scroll", handleScroll);
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const handleOpenLoginModal = () => {
-    setShowLoginModal(true);
-  };
+  const handleOpenLoginModal = () => setShowLoginModal(true);
+  const handleCloseLoginModal = () => setShowLoginModal(false);
 
-  const handleCloseLoginModal = () => {
-    setShowLoginModal(false);
-  };
+  const toggleDropdownModal = () => setShowDropdownModal(!showDropdownModal);
 
-  const handleMouseEnter = (event) => {
-    if (event.target.innerText === "Discover") {
-      setShowDropdownModal(true);
-    }
-  };
+  const toggleSideModal = () => setShowSideModal(!showSideModal);
 
-  const handleMouseLeave = () => {
-    setTimeout(() => {
-      setShowDropdownModal(false);
-    }, 100);
+  const toggleDiscoverModal = () => {
+    setShowDiscoverModal(!showDiscoverModal);
   };
 
   return (
-    <header className="header">
-      <nav className={`navbar ${scrolled ? "navbar-scrolled" : ""}`}>
+    <header className={`header ${scrolled ? "navbar-scrolled" : ""}`}>
+      <nav className={`navbar ${scrolled ? "" : "navbar-margin"}`}>
         <ul
-          className={`nav-links ${scrolled ? "scrolled" : ""}`}
-          onMouseEnter={handleMouseEnter}
-          onMouseLeave={handleMouseLeave}
+          className={`nav-links ${scrolled ? "scrolled" : ""} ${
+            showSideModal ? "hidden" : ""
+          }`}
+          onMouseLeave={() =>
+            setTimeout(() => setShowDropdownModal(false), 100)
+          }
         >
           <li className="links">
             <Link className="navbar__brand" to="/">
-              <img src={Love} alt="" />
-              saPA
+              <img src={logo} alt="" style={{ width: "200px", color:"green" }} />
             </Link>
           </li>
           <li>
@@ -76,30 +68,27 @@ const Navbar = () => {
               </form>
             </div>
           </li>
-          <li>
-            <Link
-              to="#"
-              className="links"
-              onMouseEnter={handleMouseEnter}
-              onMouseLeave={handleMouseLeave}
+          <li className="links">
+            <div
+              onClick={toggleDiscoverModal}
+              style={{
+                cursor: "pointer",
+                color: "#002d13",
+                fontSize: "1.5rem",
+              }}
             >
               Discover
               <IoMdArrowDropdown />
-            </Link>
+            </div>
             <Modal
-              show={showDropdownModal}
-              onHide={() => setShowDropdownModal(false)}
-              className="modal-dialog-centered"
+              show={showDiscoverModal}
+              onHide={toggleDiscoverModal}
+              centered
+              size="lg"
             >
-              <Modal.Header>
-                <Modal.Title>Discover</Modal.Title>
-              </Modal.Header>
-              <Modal.Body>
-                <DropdownMenu />
-              </Modal.Body>
+              <Discover />
             </Modal>
           </li>
-
           <li className="links">
             <Link to="/howitworks">How It Works</Link>
           </li>
@@ -108,7 +97,9 @@ const Navbar = () => {
               SignIn
             </button>
           </li>
-          <AiOutlineBars className="menu__icon" />
+          <div className="menu__icon">
+            <AiOutlineBars onClick={toggleSideModal} />
+          </div>
         </ul>
       </nav>
 

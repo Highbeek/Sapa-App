@@ -1,102 +1,33 @@
-/* Signup form */
-.signUp__modal {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.signUp__modal.hidden {
-  display: none;
-}
-
-.signUp__content {
+/* Modal styles */
+/* .modal__content {
+  width: 600px;
   background-color: #fff;
   padding: 20px;
   border-radius: 10px;
-  width: 400px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-}
+} */
 
-
-.cancel__btn.signUp {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  font-size: 24px;
-  background-color: transparent;
-  border: none;
-  cursor: pointer;
-}
-
-.cancel__btn.signUp {
-  background-color: #f44336;
-  border: none;
-  color: #fff;
-  font-size: 20px;
-  font-weight: bold;
-  cursor: pointer;
-  border-radius: 50%;
-  width: 30px;
-  height: 30px;
-  line-height: 30px;
-  text-align: center;
-  position: absolute;
-  top: 10px;
-  right: 10px;
-}
-
-.signUp__content h2 {
-  color: #1c1c1c;
-  font-size: 22px;
-  font-weight: bold;
-  margin-top: 0;
-  text-align: center;
-}
-
-.signUp__content label {
-  color: #1c1c1c;
-  display: block;
-  font-size: 20px;
-  font-weight: bold;
-  margin-bottom: 10px;
-}
-
-.signUp__input[type="email"],
-.signUp__input[type="password"] {
-  background-color: #f0f0f0;
-  border: none;
-  border-radius: 5px;
-  box-shadow: none;
-  color: #1c1c1c;
-  font-size: 18px;
-  padding: 10px;
-  margin-bottom: 20px;
+/* Input styles */
+.signIn__form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   width: 100%;
 }
 
-.signUp__input[type="email"]:focus,
-.signUp__input[type="password"]:focus {
-  outline: none;
-  box-shadow: 0 0 5px #4CAF50;
-}
-
-.signUp__content .error {
+/* Error message styles */
+.error {
   color: #f44336;
   font-size: 16px;
   margin-bottom: 10px;
 }
 
-.signUp__btn[type="submit"] {
-  background-color: #4CAF50;
+/* Sign-in and Sign-up button styles */
+.sign-in__btn,
+.sign-up__btn {
+  background-color: #4caf50;
   border: none;
   border-radius: 5px;
   color: #fff;
@@ -109,15 +40,15 @@
   margin-left: 5px;
 }
 
-.signUp__btn:hover {
+.sign-in__btn:hover,
+.sign-up__btn:hover {
   background-color: #1c1c1c;
-  color: #fff;
 }
 
-.signUp__content .signIn__form {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 100%;
+/* Forget password styles */
+.forget__password {
+  color: #1c1c1c;
+  /* text-decoration: underline; */
+  cursor: pointer;
+  margin-top: 10px;
 }

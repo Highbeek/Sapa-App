@@ -1,3 +1,64 @@
-.discover{
-     margin: 100px auto 200px auto;
+.footer__container {
+  background: var(--secondary);
+  position: relative;
+  width: 100%;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  padding: 1.25em 6.25em;
+  box-sizing: border-box;
+}
+
+.box-container {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+  height: 200px;
+}
+
+.box {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.box h3 {
+  font-size: 1.8rem;
+  padding: 1rem 0;
+  color: var(--main-color);
+}
+
+.box a {
+  display: flex;
+  align-items: center;
+  font-size: 1.4rem;
+  padding: 0.75rem 0;
+  color: var(--main-color);
+  text-decoration: none;
+  color: var(--main-color);
+}
+
+.box a svg {
+  margin-right: 0.5rem;
+}
+
+.social__links {
+  height: 3rem;
+  width: 3.5rem;
+  line-height: 3.5rem;
+  background: var(--secondary);
+  color: var(--main-color);
+  margin-right: 1rem;
+  text-align: center;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+
+.bottom {
+  text-align: center;
+  font-size: 1.2rem;
+  padding: 1rem 0.5rem;
+  margin-top: 1rem;
+  color: var(--main-color);
+  border-top: 1px solid var(--main-color);
 }

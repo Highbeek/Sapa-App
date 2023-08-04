@@ -15,23 +15,25 @@ const Home = () => {
     <div className="homepage">
       <section className="home">
         <div className="motto">
-          <h1>
-            Give <br />
-            Happiness <br />
-            With Every <span>Naira</span>
-          </h1>
-          <h4>Give Help, Show Kindness, Put a Smile on a Face.</h4>
-          <div className="sapa__btn">
-            <button className="btn btn-dark btn-lg download-button">
-              <FaGooglePlay /> Download
-            </button>
-            <button
-              className="btn btn-outline-light btn-lg download-button"
-              type="button"
-            >
-              <FaApple />
-              Download
-            </button>
+          <div className="motto_text">
+            <h1>
+              Give <br />
+              Happiness <br />
+              With Every <span>Naira</span>
+            </h1>
+            <h4>Give Help, Show Kindness, Put a Smile on a Face.</h4>
+            <div className="sapa__btn">
+              <button className="btn btn-dark btn-lg download-button">
+                <FaGooglePlay /> Download
+              </button>
+              <button
+                className="btn btn-outline-light btn-lg download-button"
+                type="button"
+              >
+                <FaApple />
+                Download
+              </button>
+            </div>
           </div>
         </div>
         <div className="picBackground">

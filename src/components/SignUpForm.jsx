@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import {PropTypes} from "prop-types";
+import { PropTypes } from "prop-types";
 import "./SignUpForm.css";
 
 const SignUpForm = ({ onToggle }) => {
@@ -30,14 +30,10 @@ const SignUpForm = ({ onToggle }) => {
     } else {
       setError(null);
     }
-    
   };
 
   return (
     <div className="modal__content">
-      <button className="cancel__btn signUp" onClick={onToggle}>
-        X
-      </button>
       <h2>Sign Up</h2>
       <form className="signUp__form">
         <div>

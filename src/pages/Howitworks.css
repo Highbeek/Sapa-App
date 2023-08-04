@@ -1,5 +1,5 @@
 .howItWorks {
-  margin: 100px auto 200px auto;
+  margin: 200px auto;
 }
 
 .hiw__header {
@@ -7,14 +7,150 @@
   margin: 200px auto;
   padding: 20px auto;
   text-align: center;
-  
 }
 .hiw__header h1 {
   font-size: 2.5em;
   line-height: 1.4;
   color: var(--secondary);
 }
-.hiw__header p{
+.hiw__header p {
+  font-size: 1.2em;
+  color: var(--olive);
+}
+.hiw__cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin: 200px auto;
+  
+}
+.works__vid {
+  margin: 0px 150px;
+}
+.hiw__btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hiw__btn p {
+  font-size: 1.5em;
+}
+
+.hiw__btn:hover {
+  background-color: var(--secondary);
+  color: var(--main-color);
+}
+
+
+.bttn.hiw__btn {
+    margin:auto 45%;
+  }
+
+.hiw__records {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  height: 40vh;
+  margin-top: 6.25em;
+  background-color: var(--acid-green);
+  color: var(--main-color);
+  padding: 0em 8em;
+}
+
+.hiw__btn {
+  display: block;
+  justify-content: center;
+  align-items: center;
+  margin: 0px 50em;
+}
+
+.hiw-rec {
+  padding: 10px;
+  display: inline-block;
+  text-align: center;
+  font-size: 1.2em;
+}
+.hiw__service {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  margin: 40px;
+  padding-top: 100px;
+}
+.hiw__service h3 {
+  text-align: center;
+}
+
+.hiw__img img {
+  height: 6.25em;
+  width: 6.25em;
+  border-radius: 50%;
+}
+
+.user {
+  text-align: center;
+}
+
+.user h3 {
+  font-weight: 600;
+}
+
+/* Media queries for responsive design */
+@media screen and (max-width: 768px) {
+  .hiw__records {
+    padding: 0em 5%;
+  }
+  .bttn.hiw__btn {
+    margin: 15px;
+  }
+  hiw__btn p {
     font-size: 1.2em;
-    color: var(--olive);
+    float: center;
+  }
+
+  .hiw-rec {
+    padding: 10px;
+    display: inline-block;
+    text-align: center;
+    font-size: 0.8em;
+  }
+
+  .user {
+    text-align: center;
+  }
+
+  .user h3 {
+    font-weight: 600;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .hiw__records {
+    padding: 0em 2%;
+  }
+}
+
+@media screen and (max-width: 748px) {
+  .hiw__cards {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 10px;
+  }
+
+  .hiw__btn {
+    display: block;
+    margin: 0;
+    width: 500px;
+  }
+  .hiw__img img {
+    height: 80px;
+    width: 80px;
+  }
+
+  .hiw-rec {
+    font-size: 1em;
+  }
 }

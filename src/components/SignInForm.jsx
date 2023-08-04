@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import "./SignInForm.css";
 import Love from "../assets/love.png";
 
-const SignInForm = ({ onToggle, onClose }) => {
+const SignInForm = ({ onToggle }) => {
   // state variables
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -42,22 +42,12 @@ const SignInForm = ({ onToggle, onClose }) => {
     // Add forgot password logic here
   };
 
-  // render
   return (
     <div className="modal__content">
-      <button className="cancel__btn sign-in" onClick={onClose}>
-        X
-      </button>
       <div className="modal__Section">
-        <div className="modal__hero">
-          <img src={Love} alt="" />
-          saPA
-        </div>
-
         <form className="signIn__form">
           <h2>Sign In</h2>
-          {/* Email */}
-          <div>
+          <div className="input__group">
             <label>Email:</label>
             <input
               className="signIn__input"
@@ -68,8 +58,7 @@ const SignInForm = ({ onToggle, onClose }) => {
             />
           </div>
 
-          {/* Password */}
-          <div>
+          <div className="input__group">
             <label>Password:</label>
             <input
               className="signIn__input"
@@ -80,36 +69,18 @@ const SignInForm = ({ onToggle, onClose }) => {
             />
           </div>
 
-          {/* Error */}
           {error && <div className="error">{error}</div>}
 
-          {/* Sign in button */}
-          <button
-            className="sign-in__btn sign-in "
-            type="submit"
-            onClick={handleSignIn}
-          >
+          <button className="sign-in__btn" type="submit" onClick={handleSignIn}>
             Sign In
           </button>
 
-          {/* Sign up button */}
-          <button
-            className="sign-up__btn sign-in  signIn"
-            type="submit"
-            // onClick={handleSignUp}
-            onClick={onToggle}
-          >
-            Sign Up
-          </button>
-
-          {/* Forget password */}
           <div className="forget__password" onClick={handleForgetPassword}>
             Forget your Password?
           </div>
         </form>
       </div>
 
-      {/* Sign up page */}
       {showSignUp && <div>Sign Up page</div>}
     </div>
   );
