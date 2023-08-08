@@ -38,6 +38,6 @@ The saPA app concept was created by the saPA Team. We are excited to create a po
 
 ## 📝 Feedback and Contact
 
-We welcome your feedback and suggestions for the saPA app concept. If you'd like to learn more or share your thoughts, feel free to reach out through the contact information provided on the landing page.
+I welcome your feedback and suggestions for the saPA app concept. If you'd like to learn more or share your thoughts, feel free to reach out through the contact information provided on the landing page.
 
 **Note:** This landing page provides an overview of the saPA app concept. Future versions of the app may offer more advanced features and functionalities.
